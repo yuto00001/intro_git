@@ -1,0 +1,92 @@
+/* 上がサイズに関するスタイル、次が黒アイコンのスタイル、次が白アイコンのスタイル */
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 {
+  font-size: 18px;
+}
+.material-icons.md-24 {
+  font-size: 24px;
+}
+.material-icons.md-36 {
+  font-size: 36px;
+}
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark {
+  color: rgba(0, 0, 0, 0.54);
+}
+.material-icons.md-dark.md-inactive {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light {
+  color: rgba(255, 255, 255, 1);
+}
+.material-icons.md-light.md-inactive {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.my-icon {
+  font-weight: bold;
+  background-color: rgba(194, 194, 194, 0.705);
+  border-radius: 50%;
+  padding: 1px;
+  margin: 3px;
+  float: right;
+  cursor: pointer;
+}
+
+/* ここまでがマテリアルアイコンのスタイル */
+
+#show {
+  float: right;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-right: 3px;
+}
+
+/* ここまでがfont-awesomeのスタイル */
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, sans-serif;
+}
+
+#menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  background: #4c81e9;
+  padding: 8px;
+  box-sizing: border-box;
+  width: 180px;
+  min-height: 100%;
+}
+
+#main {
+  z-index: 1;
+  background: #eee;
+  position: absolute;
+  /* 要素は文書の通常のフローから除外され、ページレイアウト内に要素のための空間が作成されません。直近の配置されている祖先があれば、それに対して相対配置されます。そうでなければ、初期の包含ブロックに対して相対配置されます。最終的な位置は top, right, bottom, left の値によって決定されます。 */
+  top: 0;
+  left: 0;
+  color: #333;
+  padding: 8px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  /* これによりメニューを完全に隠すことができる。 */
+  overflow: auto;
+  /* overflow プロパティは、要素の内容が多すぎてブロック整形コンテキストに収まらない場合にどうするかを設定します */
+  transition: 0.4s;
+}
+
+#main.menu-open {
+  left: -180px;
+}
